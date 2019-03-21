@@ -33,8 +33,9 @@ public class QuestEditor : Editor
         objectiveList.onRemoveCallback = (list) =>
         {
             DeleteMissingGameObjects();
-            var obj = Selection.activeObject;
-            Debug.Log("Remove CALL BACK");
+            var index = list.index;
+            GameObject.DestroyImmediate(quest.objectives[index].gameObject);
+            quest.objectives.RemoveAt(index);
         };
 
         objectiveList.drawElementCallback = (Rect rect, int index, bool isActive, bool isFocused) =>
