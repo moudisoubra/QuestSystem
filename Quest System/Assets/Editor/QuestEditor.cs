@@ -61,6 +61,17 @@ public class QuestEditor : Editor
     {
         DrawDefaultInspector();
         objectiveList.DoLayoutList();
+
+        GUILayout.BeginHorizontal();
+        if (GUILayout.Button("Prev", GUILayout.MaxWidth(100)))
+        {
+            quest.Previous();
+        }
+        if (GUILayout.Button("Next", GUILayout.MaxWidth(100)))
+        {
+            quest.Next();
+        }
+        GUILayout.EndHorizontal();
     }
 
     public void DeleteMissingGameObjects()

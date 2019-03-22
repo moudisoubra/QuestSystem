@@ -146,7 +146,8 @@ MonoBehaviour:
   - {fileID: 2121284215}
   - {fileID: 651416004}
   - {fileID: 153779959}
-  current: 0
+  current: 3
+  currentObjective: {fileID: 153779959}
 --- !u!4 &71405479
 Transform:
   m_ObjectHideFlags: 0

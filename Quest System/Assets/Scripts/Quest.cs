@@ -19,15 +19,22 @@ public class Quest : MonoBehaviour
     // Update is called once per frame
     public void Next()
     {
-        current++;
-        objectives[current].Begin();
-        currentObjective = objectives[current];
+        if (current < objectives.Count - 1)
+        {
+            current++;
+            objectives[current].Begin();
+            currentObjective = objectives[current];
+        }
+
     }
 
     public void Previous()
     {
-        current--;
-        objectives[current].Begin();
-        currentObjective = objectives[current];
+        if (current > 0)
+        {
+            current--;
+            objectives[current].Begin();
+            currentObjective = objectives[current];
+        }
     }
 }
